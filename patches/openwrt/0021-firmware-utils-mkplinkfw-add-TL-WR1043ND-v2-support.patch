@@ -1,0 +1,32 @@
+From: juhosg <juhosg@3c298f89-4303-0410-b956-a3cf2f4a3e73>
+Date: Fri, 29 Nov 2013 20:51:15 +0000
+Subject: firmware-utils/mkplinkfw: add TL-WR1043ND v2 support
+
+Signed-off-by: Gabor Juhos <juhosg@openwrt.org>
+
+git-svn-id: svn://svn.openwrt.org/openwrt/trunk@38957 3c298f89-4303-0410-b956-a3cf2f4a3e73
+
+diff --git a/tools/firmware-utils/src/mktplinkfw.c b/tools/firmware-utils/src/mktplinkfw.c
+index 2be6335..f5e6423 100644
+--- a/tools/firmware-utils/src/mktplinkfw.c
++++ b/tools/firmware-utils/src/mktplinkfw.c
+@@ -50,6 +50,7 @@
+ #define HWID_TL_WR941ND_V2	0x09410002
+ #define HWID_TL_WR941ND_V4	0x09410004
+ #define HWID_TL_WR1043ND_V1	0x10430001
++#define HWID_TL_WR1043ND_V2	0x10430002
+ #define HWID_TL_WR1041N_V2	0x10410002
+ #define HWID_TL_WR2543N_V1	0x25430001
+ 
+@@ -279,6 +280,11 @@ static struct board_info boards[] = {
+ 		.hw_rev		= 1,
+ 		.layout_id	= "8M",
+ 	}, {
++		.id		= "TL-WR1043NDv2",
++		.hw_id		= HWID_TL_WR1043ND_V2,
++		.hw_rev		= 1,
++		.layout_id	= "8Mlzma",
++	}, {
+ 		.id		= "TL-WR2543Nv1",
+ 		.hw_id		= HWID_TL_WR2543N_V1,
+ 		.hw_rev		= 1,
