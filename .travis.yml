@@ -9,7 +9,7 @@ install:
   - git clone https://github.com/freifunkhamburg/site-ffhh.git site
 before_script:
   - make update
-script: make
+script: make -j2
 notifications:
   recipients:
     - leo@hamburg.freifunk.net
