@@ -2,7 +2,9 @@ language: c
 compiler: gcc
 before_install:
   - sudo apt-get update
-  - sudo apt-get install subversion libncurses5-dev libz-dev 
+  - sudo apt-get install subversion libncurses5-dev libz-dev
+  - git config --global user.email "travis@hamburg.freifunk.net"
+  - git config --global user.name "FF travis"
 install:
   - git clone https://github.com/freifunkhamburg/site-ffhh.git site
 before_script:
