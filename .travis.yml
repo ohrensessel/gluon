@@ -9,7 +9,11 @@ install:
   - git clone https://github.com/freifunkhamburg/site-ffhh.git site
 before_script:
   - make update
-script: make -j2
+script: make V=s -j3
+cache:
+  directories:
+  - ./openwrt/toolchain
+  - ./openwrt/tools
 notifications:
   recipients:
     - leo@hamburg.freifunk.net
