@@ -1,0 +1,19 @@
+language: c
+compiler: gcc
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install subversion libncurses5-dev libz-dev 
+install:
+  - git clone https://github.com/freifunkhamburg/site-ffhh.git site
+before_script:
+  - make update
+script: make
+branches:
+  only:
+    - travis
+notifications:
+  recipients:
+    - leo@hamburg.freifunk.net
+  email:
+    on_success: change
+    on_failure: always
