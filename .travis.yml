@@ -8,9 +8,6 @@ install:
 before_script:
   - make update
 script: make
-branches:
-  only:
-    - travis
 notifications:
   recipients:
     - leo@hamburg.freifunk.net
